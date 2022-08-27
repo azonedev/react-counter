@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Box extends Component{
     
     state = {
-        number : 6,
+        number : 0,
         decrementClass : "btn btn-warning",
     }
 
