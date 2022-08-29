@@ -30,20 +30,17 @@ class Box extends Component{
                 decrementClass : "btn btn-danger"
             })
         }
-    }
-
-    removeBox = () => {
-        // todo: remove the current box
-    }
+    } 
 
     render(){
+        const {id,removeBox} = this.props
         return (
             <div className="m-3">
                 <button className={this.state.decrementClass} onClick={this.decrement}>-</button>
                 <span className="p-3">{this.state.number}</span>
                 <button className="btn btn-primary" onClick={this.increment}>+</button>
                 <span className='p-3'></span>
-                <button className='btn btn-danger' onClick={this.removeBox}>X</button>
+                <button className='btn btn-danger' onClick={()=>removeBox(id)}>X</button>
             </div>
         )
     }
